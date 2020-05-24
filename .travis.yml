@@ -1,0 +1,18 @@
+language: node_js
+notifications:
+  email: false
+branches:
+  only:
+    - master
+node_js:
+  - '10'
+jobs:
+  include:
+    - stage: validate
+      script: node src validate
+    - stage: deploy
+      script: yarn run build
+      after_success: chmod +x dist/lib/index.js && node src deploy
+stages:
+  validate
+  deploy

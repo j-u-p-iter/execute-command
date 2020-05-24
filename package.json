@@ -1,0 +1,28 @@
+{
+  "name": "@j.u.p.iter/execute-command",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "env-manager": "dist/lib/index.js"
+  },
+  "scripts": {
+    "commit": "jupiter-scripts precommit --allowJs",
+    "build": "jupiter-scripts build",
+    "build:watch": "watch 'yarn run build && yarn run changePermission' ./src",
+    "lint": "jupiter-scripts lint --format codeFrame",
+    "lint:fix": "yarn run lint --fix",
+    "test": "jupiter-scripts test",
+    "changePermission": "chmod +x dist/lib/*.js"
+  },
+  "devDependencies": {
+    "@j.u.p.iter/jupiter-scripts": "^1.16.0",
+    "await-to-js": "^2.1.1",
+    "commander": "^5.1.0",
+    "os": "^0.1.1",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "concat-stream": "^2.0.0"
+  }
+}
