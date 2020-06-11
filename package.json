@@ -6,6 +6,7 @@
   "bin": {
     "env-manager": "dist/lib/index.js"
   },
+  "typings": "dist/types",
   "scripts": {
     "commit": "jupiter-scripts precommit --allowJs",
     "build": "jupiter-scripts build",
