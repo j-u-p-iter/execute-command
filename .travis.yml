@@ -5,14 +5,15 @@ branches:
   only:
     - master
 node_js:
-  - '12.16.1'
+  - '8'
 jobs:
   include:
     - stage: validate
-      script: node src validate
+      script: jupiter-scripts validate
     - stage: deploy
       script: yarn run build
-      after_success: chmod +x dist/lib/index.js && node src deploy
+      after_success: jupiter-scripts deploy
 stages:
   validate
   deploy
+
