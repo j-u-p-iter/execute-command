@@ -5,7 +5,7 @@ const runProcess = (processPath, args = []) => {
   return spawn("node", [processPath, ...args]);
 };
 
-type ExecuteCommandFn = (params: {
+export type ExecuteCommandFn = (params: {
   pathToBin: string;
   args?: string[];
   inputs?: string[];
