@@ -1,11 +1,8 @@
 {
   "name": "@j.u.p.iter/execute-command",
   "version": "0.0.0-semantically-released",
-  "main": "index.js",
   "license": "MIT",
-  "bin": {
-    "env-manager": "dist/lib/index.js"
-  },
+  "main": "dist/lib/index.js",
   "typings": "dist/types",
   "scripts": {
     "commit": "jupiter-scripts precommit --allowJs",
